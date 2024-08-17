@@ -7,6 +7,9 @@ import BackupContainer from '@/components/server/backups/BackupContainer';
 import NetworkContainer from '@/components/server/network/NetworkContainer';
 import StartupContainer from '@/components/server/startup/StartupContainer';
 import FileManagerContainer from '@/components/server/files/FileManagerContainer';
+// hyro start
+import WorldContainer from '@/components/server/world/WorldContainer';
+// hyro end
 import SettingsContainer from '@/components/server/settings/SettingsContainer';
 import AccountOverviewContainer from '@/components/dashboard/AccountOverviewContainer';
 import AccountApiContainer from '@/components/dashboard/AccountApiContainer';
@@ -86,6 +89,14 @@ export default {
             name: undefined,
             component: FileEditContainer,
         },
+        // hyro start
+        {
+            path: '/world',
+            permission: 'file.*',
+            name: 'World',
+            component: WorldContainer,
+        },
+        // hyro end
         {
             path: '/databases',
             permission: 'database.*',
